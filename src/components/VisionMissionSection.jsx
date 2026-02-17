@@ -3,7 +3,7 @@ import { Eye, Target } from "lucide-react";
 
 function VisionMissionSection() {
   return (
-    <section className="h-[600px] flex justify-center items-center section-padding bg-[#1E673F]">
+    <section className="h-full sm:h-[600px] sm:p-0 flex justify-center items-center py-16 px-4 bg-[#1E673F]">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12">
           {/* Vision */}

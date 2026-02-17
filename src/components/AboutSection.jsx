@@ -10,7 +10,7 @@ const stats = [
 
 function AboutSection() {
   return (
-    <section id="about" className="h-screen flex justify-center items-center section-padding bg-[#F9FBF9]">
+    <section id="about" className="h-full sm:h-screen sm:p-0 flex justify-center items-center py-16 px-4 bg-[#F9FBF9]">
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="text-sm font-medium text-[#E3AC33] uppercase tracking-widest">About Us</span>

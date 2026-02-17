@@ -5,7 +5,7 @@ import { Menu, X, Phone } from "lucide-react";
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-//   { label: "Programmes", href: "#programmes" },
+  { label: "Programmes", href: "#programmes" },
   { label: "Services", href: "#services" },
   { label: "Contact", href: "#contact" },
 ];
@@ -13,7 +13,7 @@ const navLinks = [
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FFFFFF]/95 backdrop-blur-md border-b border-[#FFFFFF]">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FFFFFF]/95 backdrop-blur-md border-b border-b-gray-500 px-4">
             <div className="container mx-auto flex items-center justify-between h-16 md:h-20">
                 <a href="#home" className="flex items-center gap-3 group">
                     <div className="relative">
@@ -37,12 +37,12 @@ function Navbar() {
                             {link.label}
                         </a>
                     ))}
-                    {/* <a href="tel:+27791095458">
-                        <button size="sm" className="gap-2">
+                    <a href="tel:+27791095458">
+                        <button size="sm" className="h-9 bg-[#1E673F] text-[#FFFFFF] flex items-center hover:bg-[#1E673F]/90 rounded-md px-6 gap-2">
                             <Phone className="w-3.5 h-3.5" />
                             Call Us
                         </button>
-                    </a> */}
+                    </a>
                 </div>
 
                 {/* Mobile toggle */}
@@ -57,7 +57,7 @@ function Navbar() {
 
             {/* Mobile menu */}
             {isOpen && (
-                <div className="md:hidden bg-card border-b border-border animate-fade-in">
+                <div className="md:hidden bg-card border-b border-border">
                     <div className="container mx-auto py-4 flex flex-col gap-3">
                         {navLinks.map((link) => (
                             <a
@@ -69,12 +69,12 @@ function Navbar() {
                                 {link.label}
                             </a>
                         ))}
-                        {/* <a href="tel:+27791095458">
-                            <button size="sm" className="w-full gap-2 mt-2">
+                        <a href="tel:+27791095458">
+                            <button size="sm" className="w-full bg-[#1E673F] flex items-center p-2 rounded text-[#FFFFFF] gap-2 mt-2">
                                 <Phone className="w-3.5 h-3.5" />
                                 Call Us
                             </button>
-                        </a> */}
+                        </a>
                     </div>
                 </div>
             )}

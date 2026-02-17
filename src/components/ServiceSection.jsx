@@ -9,7 +9,7 @@ const services = [
   },
   {
     icon: BookOpen,
-    title: "Skills Development",
+    title: "Skills Training",
     description: "Targeted skills programmes designed to close competency gaps and improve workforce productivity.",
   },
   {
@@ -17,16 +17,11 @@ const services = [
     title: "Compliance Training",
     description: "Health & Safety, First Aid, and regulatory compliance training to ensure workplace standards.",
   },
-  {
-    icon: Award,
-    title: "SETA-Aligned Qualifications",
-    description: "Qualifications aligned with SAQA unit standards and accredited by leading Sector Education Authorities.",
-  },
 ];
 
 function ServiceSection() {
   return (
-    <section id="services" className="h-[700px] flex items-center justify-center section-padding bg-[#F9FBF9]">
+    <section id="services" className="h-full sm:h-[700px] flex items-center justify-center py-16 px-4 bg-[#F9FBF9]">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <span className="text-sm font-medium text-[#E3AC33] uppercase tracking-widest">What We Offer</span>
@@ -35,7 +30,7 @@ function ServiceSection() {
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, i) => (
             <div
               key={service.title}

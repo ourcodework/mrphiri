@@ -4,7 +4,7 @@ import heroImage from "../assets/hero-training.jpg";
 
 function HeroSection() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <img
@@ -33,7 +33,7 @@ function HeroSection() {
             Providing industry-aligned training solutions accredited by leading SETAs — empowering individuals and organisations across South Africa.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
+          <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
             <a href="#programmes">
               <button size="lg" className="w-[240px] h-[50px] flex justify-center items-center gap-4 text-base px-8 gap-2 bg-[#E3AC33] text-black hover:bg-accent/90">
                 View Programmes

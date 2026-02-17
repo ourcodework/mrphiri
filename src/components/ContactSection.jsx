@@ -14,10 +14,10 @@ function ContactSection() {
     };
 
     return (
-        <section id="contact" className="min-h-screen flex justify-center items-center section-padding bg-[#F0F5F0]/50">
+        <section id="contact" className="h-full sm:h-screen sm:p-0 flex justify-center items-center bg-[#F0F5F0]/50 py-16 px-4">
             <div className="container mx-auto">
                 <div className="text-center mb-12">
-                    <span className="text-sm font-medium text-[#F0F5F0] uppercase tracking-widest">Get in Touch</span>
+                    <span className="text-sm font-medium text-[#E3AC33] uppercase tracking-widest">Get in Touch</span>
                     <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#18251F] mt-3">
                         Contact Us
                     </h2>
@@ -60,11 +60,11 @@ function ContactSection() {
                     </div>
 
                     {/* Form */}
-                    <form onSubmit={handleSubmit} className="w-[600px] flex flex-col space-y-4">
+                    <form onSubmit={handleSubmit} className="sm:w-[600px] flex flex-col space-y-4">
                         <div className="grid sm:grid-cols-2 gap-4">
                             <input
                                 placeholder="Your Name"
-                                className='bg-[#FFFFFF] p-2'
+                                className='w-full bg-[#FFFFFF] px-3 py-2'
                                 value={formData.name}
                                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                 required
@@ -72,7 +72,7 @@ function ContactSection() {
                             />
                             <input
                                 type="email"
-                                className='bg-[#FFFFFF] p-2'
+                                className='w-full bg-[#FFFFFF] px-3 py-2'
                                 placeholder="Email Address"
                                 value={formData.email}
                                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -82,7 +82,7 @@ function ContactSection() {
                         </div>
                         <input
                             type="tel"
-                            className='bg-[#FFFFFF] p-2'
+                            className='w-full bg-[#FFFFFF] px-3 py-2'
                             placeholder="Phone Number"
                             value={formData.phone}
                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -90,14 +90,14 @@ function ContactSection() {
                         />
                         <textarea
                             placeholder="Your Message"
-                            className='bg-[#FFFFFF] p-2'
+                            className='w-full bg-[#FFFFFF] p-2'
                             rows={5}
                             value={formData.message}
                             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                             required
                             maxLength={1000}
                         />
-                        <button type="submit" size="lg" className="h-[40px] bg-[#1E673F] flex items-center justify-center gap-2 sm:w-auto text-[#FFFFFF]">
+                        <button type="submit" size="lg" className="w-[360px] h-[40px] bg-[#1E673F] flex items-center justify-center gap-2 sm:w-auto text-[#FFFFFF]">
                             <Send className="w-4 h-4" />
                             Send Message
                         </button>
