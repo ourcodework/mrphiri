@@ -26,11 +26,11 @@ const services = [
 
 function ServiceSection() {
   return (
-    <section id="services" className="section-padding bg-background">
+    <section id="services" className="h-[700px] flex items-center justify-center section-padding bg-[#F9FBF9]">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <span className="text-sm font-medium text-accent uppercase tracking-widest">What We Offer</span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-3">
+          <span className="text-sm font-medium text-[#E3AC33] uppercase tracking-widest">What We Offer</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#18251F] mt-3">
             Our Services
           </h2>
         </div>
@@ -39,13 +39,13 @@ function ServiceSection() {
           {services.map((service, i) => (
             <div
               key={service.title}
-              className="group p-6 rounded-xl bg-card border border-border hover:border-primary/40 hover:shadow-lg transition-all duration-300"
+              className="group p-6 rounded-xl bg-[#FFFFFF] border border-border hover:border-[#1E673F]/40 hover:shadow-lg transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-5 group-hover:bg-primary/10 transition-colors">
-                <service.icon className="w-6 h-6 text-primary" />
+              <div className="w-12 h-12 rounded-xl bg-[#E4F0E9] flex items-center justify-center mb-5 group-hover:bg-[#1E673F]/10 transition-colors">
+                <service.icon className="w-6 h-6 text-[#1E673F]" />
               </div>
-              <h3 className="text-lg font-heading font-semibold text-foreground mb-2">{service.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
+              <h3 className="text-lg font-heading font-semibold text-[#18251F] mb-2">{service.title}</h3>
+              <p className="text-sm text-[#678073] leading-relaxed">{service.description}</p>
             </div>
           ))}
         </div>

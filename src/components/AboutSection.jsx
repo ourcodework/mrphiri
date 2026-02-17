@@ -10,20 +10,20 @@ const stats = [
 
 function AboutSection() {
   return (
-    <section id="about" className="section-padding bg-background">
+    <section id="about" className="h-screen flex justify-center items-center section-padding bg-[#F9FBF9]">
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="text-sm font-medium text-accent uppercase tracking-widest">About Us</span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-3 mb-6">
+          <span className="text-sm font-medium text-[#E3AC33] uppercase tracking-widest">About Us</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#18251F] mt-3 mb-6">
             Building Skills, Transforming Lives
           </h2>
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-[#678073] leading-relaxed">
             TPLR and Training Services cc was established in 2002 and converted to TPLR and Training Services (PTY) LTD in 2009. We provide accredited training courses aligned with SAQA unit standards across multiple Sector Education and Training Authorities (SETAs).
           </p>
-          <p className="text-muted-foreground leading-relaxed mt-4">
+          <p className="text-[#678073] leading-relaxed mt-4">
             We serve employed and unemployed individuals, emerging farmers, youth, women, and people with disabilities. Our management team brings extensive experience across horticulture, agriculture, Human Resources Management, Energy and Water, Local Government, Clothing Manufacturing, Construction, and Manufacturing.
           </p>
-          <p className="text-muted-foreground leading-relaxed mt-4">
+          <p className="text-[#678073] leading-relaxed mt-4">
             TPLR Training has capacitated approximately 50 companies and is accredited with multiple SETAs. We utilise experienced facilitators, assessors, and moderators registered and recognised by SETAs.
           </p>
         </div>
@@ -32,12 +32,12 @@ function AboutSection() {
           {stats.map((stat, i) => (
             <div
               key={stat.label}
-              className="text-center p-6 rounded-xl bg-secondary/50 border border-border hover:border-primary/30 transition-colors"
+              className="text-center p-6 rounded-xl bg-[#E4F0E9]/50 border border-[#1E673F] hover:border-[#1E673F]/30 transition-colors"
               style={{ animationDelay: `${i * 0.1}s` }}
             >
-              <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
-              <div className="text-2xl md:text-3xl font-heading font-bold text-foreground">{stat.value}</div>
-              <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+              <stat.icon className="w-8 h-8 text-[#1E673F] mx-auto mb-3" />
+              <div className="text-2xl md:text-3xl font-heading font-bold text-[#18251F]">{stat.value}</div>
+              <div className="text-sm text-[#678073] mt-1">{stat.label}</div>
             </div>
           ))}
         </div>
