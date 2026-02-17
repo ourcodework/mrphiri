@@ -97,7 +97,7 @@ function ContactSection() {
                             required
                             maxLength={1000}
                         />
-                        <button type="submit" size="lg" className="w-[120px] h-[40px] bg-[#1E673F] flex items-center justify-center gap-2 sm:w-auto text-[#FFFFFF]">
+                        <button type="submit" size="lg" className="h-[40px] bg-[#1E673F] flex items-center justify-center gap-2 sm:w-auto text-[#FFFFFF]">
                             <Send className="w-4 h-4" />
                             Send Message
                         </button>

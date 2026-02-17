@@ -19,7 +19,7 @@ function VisionMissionSection() {
 
           {/* Mission */}
           <div className="p-8 md:p-10 rounded-2xl bg-[#FFFFFF]/10 border border-[#FFFFFF]/15 backdrop-blur-sm">
-            <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-6">
+            <div className="w-12 h-12 rounded-xl bg-[#E3AC33] flex items-center justify-center mb-6">
               <Target className="w-6 h-6 text-accent-foreground" />
             </div>
             <h3 className="text-2xl font-heading font-bold text-[#FFFFFF] mb-4">Our Mission</h3>
