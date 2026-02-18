@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import { GraduationCap, Leaf, HardHat, Zap } from "lucide-react";
 
 const qctoPrograms = [
@@ -33,68 +33,118 @@ const ewsetaPrograms = [
 const ProgrammeList = ({ items }) => (
   <ul className="grid sm:grid-cols-2 gap-3">
     {items.map((item) => (
-      <li key={item} className="flex items-start gap-3 p-3 rounded-lg bg-secondary/50 border border-border">
-        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-        <span className="text-sm text-foreground">{item}</span>
+      <li key={item} className="flex items-start gap-3 p-3 rounded-lg bg-[#E4F0E9]/50 border border-[#DCE7E0]">
+        <div className="w-1.5 h-1.5 rounded-full bg-[#1E673F] mt-2 shrink-0" />
+        <span className="text-sm text-[#18251F]">{item}</span>
       </li>
     ))}
   </ul>
 );
 
-export class ProgrammesSection extends Component {
-  render() {
-    return (
-      <section id="programmes" className="section-padding bg-muted/50">
+const ProgrammesSection = () => {
+  const [activeTab, setActiveTab] = useState("qcto");
+
+  return (
+    <section id="programmes" className="w-full sm:h-fit sm:py-28 flex items-center py-16 px-4 bg-[#F0F5F0]/50">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <span className="text-sm font-medium text-accent uppercase tracking-widest">Our Programmes</span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-3">
+          <span className="text-sm font-medium text-[#E3AC33] uppercase tracking-widest">
+            Our Programmes
+          </span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#18251F] mt-3">
             Accredited Training Programmes
           </h2>
         </div>
 
-        <Tabs defaultValue="qcto" className="max-w-4xl mx-auto">
-          <TabsList className="w-full flex flex-wrap h-auto gap-2 bg-transparent p-0 mb-8">
-            <TabsTrigger value="qcto" className="gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full px-5 py-2.5 border border-border">
+        {/* Tabs */}
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-wrap gap-2 justify-center mb-8">
+            <button
+              onClick={() => setActiveTab("qcto")}
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-full border ${
+                activeTab === "qcto"
+                  ? "bg-[#1E673F] text-white"
+                  : "border-[#DCE7E0]"
+              }`}
+            >
               <GraduationCap className="w-4 h-4" /> QCTO
-            </TabsTrigger>
-            <TabsTrigger value="agriseta" className="gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full px-5 py-2.5 border border-border">
+            </button>
+
+            <button
+              onClick={() => setActiveTab("agriseta")}
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-full border ${
+                activeTab === "agriseta"
+                  ? "bg-[#1E673F] text-white"
+                  : "border-[#DCE7E0]"
+              }`}
+            >
               <Leaf className="w-4 h-4" /> AgriSETA
-            </TabsTrigger>
-            <TabsTrigger value="ceta" className="gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full px-5 py-2.5 border border-border">
+            </button>
+
+            <button
+              onClick={() => setActiveTab("ceta")}
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-full border ${
+                activeTab === "ceta"
+                  ? "bg-[#1E673F] text-white"
+                  : "border-[#DCE7E0]"
+              }`}
+            >
               <HardHat className="w-4 h-4" /> CETA
-            </TabsTrigger>
-            <TabsTrigger value="ewseta" className="gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full px-5 py-2.5 border border-border">
+            </button>
+
+            <button
+              onClick={() => setActiveTab("ewseta")}
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-full border ${
+                activeTab === "ewseta"
+                  ? "bg-[#1E673F] text-white"
+                  : "border-[#DCE7E0]"
+              }`}
+            >
               <Zap className="w-4 h-4" /> EWSETA
-            </TabsTrigger>
-          </TabsList>
+            </button>
+          </div>
 
-          <TabsContent value="qcto" className="animate-fade-in">
-            <h3 className="text-xl font-heading font-semibold text-foreground mb-4">QCTO Accredited Training</h3>
-            <ProgrammeList items={qctoPrograms} />
-          </TabsContent>
+          {/* Content */}
+          {activeTab === "qcto" && (
+            <>
+              <h3 className="text-xl font-semibold mb-4">
+                QCTO Accredited Training
+              </h3>
+              <ProgrammeList items={qctoPrograms} />
+            </>
+          )}
 
-          <TabsContent value="agriseta" className="animate-fade-in">
-            <h3 className="text-xl font-heading font-semibold text-foreground mb-4">Short Skills Programmes</h3>
-            <ProgrammeList items={agriShortSkills} />
-            <h3 className="text-xl font-heading font-semibold text-foreground mt-8 mb-4">Compliance Training</h3>
-            <ProgrammeList items={agriCompliance} />
-          </TabsContent>
+          {activeTab === "agriseta" && (
+            <>
+              <h3 className="text-xl font-semibold mb-4">
+                Short Skills Programmes
+              </h3>
+              <ProgrammeList items={agriShortSkills} />
 
-          <TabsContent value="ceta" className="animate-fade-in">
-            <h3 className="text-xl font-heading font-semibold text-foreground mb-4">CETA Programmes</h3>
-            <ProgrammeList items={cetaPrograms} />
-          </TabsContent>
+              <h3 className="text-xl font-semibold mt-8 mb-4">
+                Compliance Training
+              </h3>
+              <ProgrammeList items={agriCompliance} />
+            </>
+          )}
 
-          <TabsContent value="ewseta" className="animate-fade-in">
-            <h3 className="text-xl font-heading font-semibold text-foreground mb-4">EWSETA Programmes</h3>
-            <ProgrammeList items={ewsetaPrograms} />
-          </TabsContent>
-        </Tabs>
+          {activeTab === "ceta" && (
+            <>
+              <h3 className="text-xl font-semibold mb-4">CETA Programmes</h3>
+              <ProgrammeList items={cetaPrograms} />
+            </>
+          )}
+
+          {activeTab === "ewseta" && (
+            <>
+              <h3 className="text-xl font-semibold mb-4">EWSETA Programmes</h3>
+              <ProgrammeList items={ewsetaPrograms} />
+            </>
+          )}
+        </div>
       </div>
     </section>
-    )
-  }
-}
+  );
+};
 
 export default ProgrammesSection
