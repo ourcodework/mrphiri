@@ -32,7 +32,7 @@ function AboutSection() {
           {stats.map((stat, i) => (
             <div
               key={stat.label}
-              className="text-center p-6 rounded-xl bg-[#E4F0E9]/50 border border-[#1E673F] hover:border-[#1E673F]/30 transition-colors"
+              className="text-center p-6 rounded-xl bg-[#E4F0E9]/50 border border-[#DCE7E0] hover:border-[#1E673F]/30 transition-colors"
               style={{ animationDelay: `${i * 0.1}s` }}
             >
               <stat.icon className="w-8 h-8 text-[#1E673F] mx-auto mb-3" />

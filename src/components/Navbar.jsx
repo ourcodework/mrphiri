@@ -13,7 +13,7 @@ const navLinks = [
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FFFFFF]/95 backdrop-blur-md border-b border-b-gray-500 px-4">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FFFFFF]/95 backdrop-blur-md border-b border-b-[#DCE7E0] px-4">
             <div className="container mx-auto flex items-center justify-between h-16 md:h-20">
                 <a href="#home" className="flex items-center gap-3 group">
                     <div className="relative">
@@ -57,7 +57,7 @@ function Navbar() {
 
             {/* Mobile menu */}
             {isOpen && (
-                <div className="md:hidden bg-card border-b border-border">
+                <div className="md:hidden bg-card border-b border-[#DCE7E0]">
                     <div className="container mx-auto py-4 flex flex-col gap-3">
                         {navLinks.map((link) => (
                             <a

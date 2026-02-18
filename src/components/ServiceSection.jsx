@@ -34,7 +34,7 @@ function ServiceSection() {
           {services.map((service, i) => (
             <div
               key={service.title}
-              className="group p-6 rounded-xl bg-[#FFFFFF] border border-border hover:border-[#1E673F]/40 hover:shadow-lg transition-all duration-300"
+              className="group p-6 rounded-xl bg-[#FFFFFF] border border-[#DCE7E0] hover:border-[#DCE7E0]/40 hover:shadow-lg transition-all duration-300"
             >
               <div className="w-12 h-12 rounded-xl bg-[#E4F0E9] flex items-center justify-center mb-5 group-hover:bg-[#1E673F]/10 transition-colors">
                 <service.icon className="w-6 h-6 text-[#1E673F]" />
